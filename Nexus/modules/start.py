@@ -2,7 +2,7 @@ from pyrogram import filters
 from Nexus import Nexus
 import time
 import random
-from config import BOT_USERNAME, CHANNEL, SUPPORT, OWNER_USERNAME,OWNER_ID
+from config import BOT_USERNAME, CHANNEL, SUPPORT, OWNER_USERNAME, OWNER_ID
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
