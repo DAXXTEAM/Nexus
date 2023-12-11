@@ -1,5 +1,7 @@
 from Nexus import Nexus
 import aiohttp
+from pyrogram.types import InputMediaPhoto
+from telegraph import upload_file
 from pyrogram import filters, Client, enums
 from pyrogram.enums import ParseMode
 from pyrogram.types import *
@@ -17,7 +19,8 @@ def ids(_, message):
             f"ʏᴏᴜʀ ɪᴅ: `{message.from_user.id}`\n\nᴄʜᴀᴛ ɪᴅ: `{message.chat.id}`"
         )
 
-#######
+# --------------------------------------------------------------------------------- #
+# --------------------------------------------------------------------------------- #
 
 @Nexus.on_message(filters.command('id'))
 async def getid(client, message):
@@ -70,7 +73,8 @@ async def getid(client, message):
 
 
 
-########
+# --------------------------------------------------------------------------------- #
+# --------------------------------------------------------------------------------- #
 
 @Nexus.on_message(filters.command(["github", "git"]))
 async def github(_, message):
@@ -124,4 +128,19 @@ async def github(_, message):
 
     # Send the message with the inline keyboard
     await message.reply_photo(photo=avatar_url, caption=caption, reply_markup=inline_keyboard)
+
+# --------------------------------------------------------------------------------- #
+# --------------------------------------------------------------------------------- #
+
+@Nexus.on_message(filters.command(["tgm" , "link"]))
+def ul(_, message):
+    reply = message.reply_to_message
+    if reply.media:
+        i = message.reply("ᴘʀᴏᴄᴇssɪɴɢ")
+        path = reply.download()
+        fk = upload_file(path)
+        for x in fk:
+            url = "https://telegra.ph" + x
+
+        i.edit(f' ᴄᴏᴘʏ ᴛʜɪs ʟɪɴᴋ {url}')
 
