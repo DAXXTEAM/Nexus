@@ -54,7 +54,7 @@ button = InlineKeyboardMarkup([
 
 @Nexus.on_message(filters.command("start"))
 async def start(_, message):
-    random_pic = random.choice(NEXUS_PIC)
-    await message.reply_photo(random_pic, caption=START_TEXT.format(message.from_user.mention), reply_markup=button)
+await message.reply_photo(
+            photo=random.choice(NEXUS_PIC), caption=START_TEXT.format(message.from_user.mention), reply_markup=button)
 
   
