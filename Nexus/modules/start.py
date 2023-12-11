@@ -2,7 +2,7 @@ from pyrogram import filters
 from Nexus import Nexus
 import time
 import random
-from config import BOT_USERNAME
+from config import BOT_USERNAME, CHANNEL, SUPPORT, OWNER_USERNAME
 from pyrogram.types import *
 
 
@@ -37,11 +37,19 @@ Usᴇ /Help ғᴏʀ ᴍᴏʀᴇ ᴄᴏᴍᴍᴀɴᴅs. 🎶
 
 button = InlineKeyboardMarkup([
         [
-            InlineKeyboardButton("➕ ᴀᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),    
+            InlineKeyboardButton("➕ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),    
         ],
         [
-            InlineKeyboardButton("ʜᴇʟᴘ", callback_data="help_"),    
+            InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url=f"{CHANNEL}"),
+            InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ", url=f"{SUPPORT}"),   
+        ],
+        [
+                InlineKeyboardButton("ᴅᴇᴠ", url=f"t.me/{OWNER_USERNAME}"),
+        ],
+        [
+            InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅ", callback_data="help_"),    
         ]
+        
 ])
 
 @Nexus.on_message(filters.command("start"))
