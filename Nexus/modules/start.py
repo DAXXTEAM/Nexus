@@ -22,7 +22,9 @@ button = InlineKeyboardMarkup([
 ])
 
 @Nexus.on_message(filters.command("start"))
-async def start(_,message):
-  await message.reply_photo("https://telegra.ph/file/65eeaaa6d9542513824d0.jpg",
-                            caption=START_TEXT.format(message.from_user.mention),reply_markup=button)
-
+async def start(_, message):
+    await message.reply_photo(
+        photo=random.choice(NEXUS_PIC),
+        caption=START_TEXT.format(message.from_user.first_name, message.from_user.id),
+        reply_markup=button
+    )
