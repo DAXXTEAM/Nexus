@@ -5,7 +5,6 @@ import random
 from config import BOT_USERNAME, CHANNEL, SUPPORT, OWNER_USERNAME
 from pyrogram.types import *
 
-"""
 
 NEXUS_PIC = [
 "https://telegra.ph/file/7c25ef427c9f3cded5577.jpg",
@@ -22,7 +21,6 @@ NEXUS_PIC = [
 "https://telegra.ph/file/59a305f8ce0c4e85949cc.jpg"
 
 ]
-"""
 
 
 START_TEXT = """
