@@ -5,6 +5,7 @@ import random
 from config import BOT_USERNAME, CHANNEL, SUPPORT, OWNER_USERNAME
 from pyrogram.types import *
 
+"""
 
 NEXUS_PIC = [
 "https://telegra.ph/file/7c25ef427c9f3cded5577.jpg",
@@ -21,6 +22,7 @@ NEXUS_PIC = [
 "https://telegra.ph/file/59a305f8ce0c4e85949cc.jpg"
 
 ]
+"""
 
 
 START_TEXT = """
@@ -40,7 +42,7 @@ button = InlineKeyboardMarkup([
             InlineKeyboardButton("➕ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),    
         ],
         [
-            InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", ),
+            InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url=f"{CHANNEL}"),
             InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ", url=f"{SUPPORT}"),   
         ],
         [
@@ -54,8 +56,7 @@ button = InlineKeyboardMarkup([
 
 @Nexus.on_message(filters.command("start"))
 async def start(_,message):
-  await message.reply_photo(
-          photo=random.choice(NEXUS_PIC),
+  await message.reply_photo("https://telegra.ph/file/7a0553bd4664486ab3008.jpg",
                             caption=START_TEXT.format(message.from_user.mention),reply_markup=button)
 
 
