@@ -1,4 +1,4 @@
-from pyrogram import filters
+from pyrogram import Client, filters
 from Nexus import Nexus
 import time
 import random
