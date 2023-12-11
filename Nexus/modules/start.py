@@ -2,7 +2,7 @@ from pyrogram import filters
 from Nexus import Nexus
 import time
 import random
-from config import BOT_USERNAME, CHANNEL, SUPPORT, OWNER_USERNAME
+from config import BOT_USERNAME, CHANNEL, SUPPORT, OWNER_USERNAME, OWNER_ID
 from pyrogram.types import *
 
 
@@ -44,7 +44,7 @@ button = InlineKeyboardMarkup([
             InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ", url=f"{SUPPORT}"),   
         ],
         [
-                InlineKeyboardButton("ᴅᴇᴠ", url=f"t.me/{OWNER_USERNAME}"),
+                InlineKeyboardButton("ᴅᴇᴠ", user_id=config.OWNER_ID"),
         ],
         [
             InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅ", callback_data="help_"),    
