@@ -9,5 +9,4 @@ pillow
 aiofiles
 numpy
 wget
-telegraph
 aiohttp
