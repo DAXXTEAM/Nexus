@@ -3,8 +3,7 @@ from Nexus import Nexus
 import time
 import random
 from config import BOT_USERNAME, CHANNEL, SUPPORT, OWNER_USERNAME
-from pyrogram.types import *
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
 NEXUS_PIC = [
@@ -30,7 +29,7 @@ Wᴇʟᴄᴏᴍᴇ \n
 Iᴍᴍᴇʀsᴇ ʏᴏᴜʀsᴇʟғ ɪɴ ᴀ ᴡᴏʀʟᴅ ᴏғ ᴍᴜsɪᴄ ᴡɪᴛʜ ᴛʜɪs ʙᴏᴛ\n
 Dɪsᴄᴏᴠᴇʀ, ᴘʟᴀʏ, ᴀɴᴅ ᴇɴJᴏʏ ʏᴏᴜʀ ғᴀᴠᴏʀɪᴛᴇ ᴛᴜɴᴇs ʀɪɢʜᴛ ʜᴇʀᴇ\n
 Sɪᴍᴘʟʏ sᴇɴᴅ ᴍᴇ ᴛʜᴇ ɴᴀᴍᴇ ᴏғ ᴛʜᴇ sᴏɴɢ ᴏʀ ᴀʀᴛɪsᴛ, ᴀɴᴅ ʟᴇᴛ ᴛʜᴇ ᴍᴇʟᴏᴅʏ ʙᴇɢɪɴ. \n
-Usᴇ /Help ғᴏʀ ᴍᴏʀᴇ ᴄᴏᴍᴍᴀɴᴅs. 🎶
+Usᴇ Help ғᴏʀ ᴍᴏʀᴇ ᴄᴏᴍᴍᴀɴᴅs. 🎶
 """
 
 button = InlineKeyboardMarkup([
@@ -42,7 +41,7 @@ button = InlineKeyboardMarkup([
         InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ", url=f"{SUPPORT}"),
     ],
     [
-        InlineKeyboardButton("ᴅᴇᴠ", url=f"{OWNER_USERNAME}"),
+        InlineKeyboardButton("ᴅᴇᴠ", url=f"t.me/{OWNER_USERNAME}"),
     ],
     [
         InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅ", callback_data="help_"),
