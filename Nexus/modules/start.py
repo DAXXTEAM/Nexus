@@ -40,11 +40,11 @@ button = InlineKeyboardMarkup([
             InlineKeyboardButton("➕ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),    
         ],
         [
-            InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url=f"{CHANNEL}"),
+            InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", ),
             InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ", url=f"{SUPPORT}"),   
         ],
         [
-                InlineKeyboardButton("ᴅᴇᴠ", user_id=config.OWNER_ID"),
+                InlineKeyboardButton("ᴅᴇᴠ", url=f"{OWNER_USERNAME}"),
         ],
         [
             InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅ", callback_data="help_"),    
