@@ -4,6 +4,7 @@ import time
 import random
 from config import BOT_USERNAME, CHANNEL, SUPPORT, OWNER_USERNAME
 from pyrogram.types import *
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 
 NEXUS_PIC = [
