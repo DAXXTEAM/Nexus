@@ -56,7 +56,7 @@ button = InlineKeyboardMarkup([
 async def start(_,message):
   await message.reply_photo(
           random.choice(NEXUS_PIC),
-                            caption=START_TEXT.format(message.from_user.mention),reply_markup=button))
+                            caption=START_TEXT.format(message.from_user.mention),reply_markup=button)
 
 
 
