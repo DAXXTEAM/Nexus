@@ -7,18 +7,18 @@ from pyrogram.types import *
 
 
 NEXUS_PIC = [
-"https://telegra.ph/file/2e85d11aefdf6cd01301b.jpg",
-"https://telegra.ph/file/0a08b180583f13952336a.jpg",
-"https://telegra.ph/file/ace92d59d19127d2d4e89.jpg",
-"https://telegra.ph/file/bb0a28259990c6a978985.jpg",
-"https://telegra.ph/file/ace92d59d19127d2d4e89.jpg",
-"https://telegra.ph/file/a0db46dfacd94e489117b.jpg",
-"https://telegra.ph/file/cd77be2595cdc2fca60a3.jpg",
-"https://telegra.ph/file/632724b3d30c691247c77.jpg",
-"https://telegra.ph/file/a2d01afe4f2cb1d4b650c.jpg",
-"https://telegra.ph/file/94dc035df11dfb159b999.jpg",
-"https://telegra.ph/file/fed9a5b1cbaaefc3a818c.jpg",
-"https://telegra.ph/file/66fd03632cbb38bdb4193.jpg"
+"https://telegra.ph/file/7c25ef427c9f3cded5577.jpg",
+"https://telegra.ph/file/625d235cc0a22fb8525b5.jpg",
+"https://telegra.ph/file/1c62254d59baf7f968ba7.jpg",
+"https://telegra.ph/file/7a0553bd4664486ab3008.jpg",
+"https://telegra.ph/file/7b4dfa606e6f23961d30e.jpg",
+"https://telegra.ph/file/2773dec98d87b8562618c.jpg",
+"https://telegra.ph/file/80353d02e0368b71d2666.jpg",
+"https://telegra.ph/file/6e5331dc4bef87464ea1c.jpg",
+"https://telegra.ph/file/199a2e44cb8e77bb21b34.jpg",
+"https://telegra.ph/file/8371bcd8952d089f9ec05.jpg",
+"https://telegra.ph/file/f970e559dd1bb96fced1a.jpg",
+"https://telegra.ph/file/59a305f8ce0c4e85949cc.jpg"
 
 ]
 
