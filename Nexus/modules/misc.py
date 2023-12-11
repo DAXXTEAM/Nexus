@@ -1,4 +1,3 @@
-from asyncio
 from Nexus import Nexus
 from pyrogram import filters, Client, enums
 from pyrogram.enums import ParseMode
