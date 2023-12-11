@@ -2,7 +2,7 @@ from pyrogram import filters
 from Nexus import Nexus
 import time
 import random
-from config import BOT_USERNAME, CHANNEL, SUPPORT, OWNER_USERNAME, OWNER_ID
+from config import BOT_USERNAME, CHANNEL, SUPPORT, OWNER_USERNAME
 from pyrogram.types import *
 
 
@@ -56,7 +56,7 @@ button = InlineKeyboardMarkup([
 async def start(_,message):
   await message.reply_photo(
           random.choice(NEXUS_PIC),
-                            caption=START_TEXT.format(message.from_user.mention),reply_markup=button)
+                            caption=START_TEXT.format(message.from_user.mention),reply_markup=button))
 
 
 
