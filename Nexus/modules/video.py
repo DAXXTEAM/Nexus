@@ -18,8 +18,6 @@ from Nexus.Helper.errors import DurationLimitError
 from Nexus.Helper.requirements import get_video_stream
 from pytgcalls.types import Update
 from pytgcalls.types import AudioVideoPiped
-from pornhub_api import PornhubApi
-from pornhub_api.backends.aiohttp import AioHttpBackend
 
 
 DURATION_LIMIT = 300
