@@ -1,4 +1,5 @@
 from Nexus import Nexus
+import aiohttp
 from pyrogram import filters, Client, enums
 from pyrogram.enums import ParseMode
 from pyrogram.types import *
