@@ -1,0 +1,12 @@
+ffmpeg-python
+py-tgcalls
+pyrogram
+python-dotenv==1.0.0
+tgcrypto
+youtube_search
+yt_dlp
+pillow
+aiofiles
+numpy
+wget
+aiohttp
