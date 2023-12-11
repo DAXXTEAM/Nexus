@@ -7,8 +7,7 @@ from typing import Callable
 from pyrogram import filters, Client
 from pyrogram.types import *
 from Nexus.Helper.cust_p_filters import admin_filter
-from pornhub_api import PornhubApi
-from pornhub_api.backends.aiohttp import AioHttpBackend
+from youtube_search import YoutubeSearch
 from asyncio.queues import QueueEmpty
 from PIL import ImageGrab
 from PIL import Image, ImageFont, ImageDraw, ImageFilter
