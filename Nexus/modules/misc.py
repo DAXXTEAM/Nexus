@@ -1,5 +1,6 @@
 from Nexus import Nexus
 import aiohttp
+from config import OWNER_ID
 from pyrogram import filters, Client, enums
 from pyrogram.enums import ParseMode
 from pyrogram.types import *
@@ -103,4 +104,12 @@ async def brah3(Nexus :Nexus, message:Message):
              pass
 
 # --------------------------------------------------------------------------------- #
+
+@Nexus.on_message(filters.command("leavegroup")& filters.user(OWNER_ID))
+async def bot_leave(_, message):
+    chat_id = message.chat.id
+    text = f"sᴜᴄᴄᴇssғᴜʟʟʏ   ʟᴇғᴛ  !!."
+    await message.reply_text(text)
+    await app.leave_chat(chat_id=chat_id, delete=True)
+    
 # --------------------------------------------------------------------------------- #
