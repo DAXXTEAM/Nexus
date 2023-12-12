@@ -88,7 +88,7 @@ async def brah2(_, msg):
 
 # --------------------------------------------------------------------------------- #
 @Nexus.on_message(filters.video_chat_members_invited)
-async def brah3(app :app, message:Message):
+async def brah3(Nexus :Nexus, message:Message):
            text = f"{message.from_user.mention} ɪɴᴠɪᴛᴇᴅ "
            x = 0
            for user in message.video_chat_members_invited.users:
