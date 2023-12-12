@@ -5,6 +5,9 @@ from pyrogram.enums import ParseMode
 from pyrogram.types import *
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
+# --------------------------------------------------------------------------------- #
+# --------------------------------------------------------------------------------- #
+
 @Nexus.on_message(filters.command("me"))
 def ids(_, message):
     reply = message.reply_to_message
@@ -70,6 +73,34 @@ async def getid(client, message):
     )
 
 
+
+# --------------------------------------------------------------------------------- #
+# --------------------------------------------------------------------------------- #
+
+
+@Nexus.on_message(filters.video_chat_started)
+async def brah(_, msg):
+       await msg.reply("ᴠᴏɪᴄᴇ ᴄʜᴀᴛ sᴛᴀʀᴛᴇᴅ")
+# --------------------------------------------------------------------------------- #
+@Nexus.on_message(filters.video_chat_ended)
+async def brah2(_, msg):
+       await msg.reply("**ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴇɴᴅᴇᴅ**")
+
+# --------------------------------------------------------------------------------- #
+@Nexus.on_message(filters.video_chat_members_invited)
+async def brah3(app :app, message:Message):
+           text = f"{message.from_user.mention} ɪɴᴠɪᴛᴇᴅ "
+           x = 0
+           for user in message.video_chat_members_invited.users:
+             try:
+               text += f"[{user.first_name}](tg://user?id={user.id}) "
+               x += 1
+             except Exception:
+               pass
+           try:
+             await message.reply(f"{text} 😉")
+           except:
+             pass
 
 # --------------------------------------------------------------------------------- #
 # --------------------------------------------------------------------------------- #
