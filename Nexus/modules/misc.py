@@ -108,8 +108,8 @@ async def brah3(Nexus :Nexus, message:Message):
 @Nexus.on_message(filters.command("leavegroup")& filters.user(OWNER_ID))
 async def bot_leave(_, message):
     chat_id = message.chat.id
-    text = f"sᴜᴄᴄᴇssғᴜʟʟʏ   ʟᴇғᴛ  !!."
+    text = f"ɢᴏᴏᴅ ʙʏᴇ ʙᴀʙʏ🫡"
     await message.reply_text(text)
-    await app.leave_chat(chat_id=chat_id, delete=True)
+    await Nexus.leave_chat(chat_id=chat_id, delete=True)
     
 # --------------------------------------------------------------------------------- #
