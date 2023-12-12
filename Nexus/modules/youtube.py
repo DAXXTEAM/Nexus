@@ -8,8 +8,6 @@ from yt_dlp import YoutubeDL
 from pyrogram import filters
 from pyrogram.types import *
 from Nexus import Nexus
-from pornhub_api import PornhubApi
-from pornhub_api.backends.aiohttp import AioHttpBackend
 
 # ------------------------------------------------------------------------------- #
 
