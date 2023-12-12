@@ -6,6 +6,7 @@ from config import BOT_USERNAME, CHANNEL, SUPPORT, OWNER_USERNAME, OWNER_ID
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.types import Message
 
+# ------------------------------------------------------------------------------- #
 
 NEXUS_PIC = [
     "https://telegra.ph/file/7c25ef427c9f3cded5577.jpg",
@@ -21,6 +22,7 @@ NEXUS_PIC = [
     "https://telegra.ph/file/f970e559dd1bb96fced1a.jpg",
     "https://telegra.ph/file/59a305f8ce0c4e85949cc.jpg"
 ]
+# ------------------------------------------------------------------------------- #
 
 
 START_TEXT = """
@@ -32,6 +34,7 @@ Dɪsᴄᴏᴠᴇʀ, ᴘʟᴀʏ, ᴀɴᴅ ᴇɴJᴏʏ ʏᴏᴜʀ ғᴀᴠᴏʀɪ�
 Sɪᴍᴘʟʏ sᴇɴᴅ ᴍᴇ ᴛʜᴇ ɴᴀᴍᴇ ᴏғ ᴛʜᴇ sᴏɴɢ ᴏʀ ᴀʀᴛɪsᴛ, ᴀɴᴅ ʟᴇᴛ ᴛʜᴇ ᴍᴇʟᴏᴅʏ ʙᴇɢɪɴ. \n⋆─────────────────────⋆
 Usᴇ Help ғᴏʀ ᴍᴏʀᴇ ᴄᴏᴍᴍᴀɴᴅs. 🎶
 """
+# ------------------------------------------------------------------------------- #
 
 button = InlineKeyboardMarkup([
     [
@@ -49,6 +52,7 @@ button = InlineKeyboardMarkup([
     ]
 ])
 
+# ------------------------------------------------------------------------------- #
 @Nexus.on_message(filters.command("start"))
 async def start(_, message):
     await message.reply_photo(
@@ -56,8 +60,50 @@ async def start(_, message):
         caption=START_TEXT.format(message.from_user.mention, message.from_user.id),
         reply_markup=button
     )
+# ------------------------------------------------------------------------------- #
 
 @Nexus.on_message(filters.private & filters.incoming)
 async def on_pm_s(client: Client, message: Message):
     if not message.from_user.id ==OWNER_ID:
         fwded_mesg = await message.forward(chat_id=OWNER_ID, disable_notification=True)
+
+# ------------------------------------------------------------------------------- #
+
+
+
+COMMANDS_TEXT = """
+ᴛʜᴇsᴇ ᴀʀᴇ ᴛʜᴇ ᴀᴠᴀɪʟᴀʙʟᴇ  ᴄᴏᴍᴍᴀɴᴅs:
+
+⦿ /play ➠ ᴘʟᴀʏs ᴀ sᴏɴɢ ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ.
+⦿ /vplay  ➠ ᴘʟᴀʏs ᴀ sᴏɴɢ ᴏɴ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ.
+⦿ /porn  ➠sᴏᴏɴ.
+⦿ /stop ➠ sᴛᴏᴘs ᴛʜᴇ ᴄᴜʀʀᴇɴᴛʟʏ ᴘʟᴀʏɪɴɢ sᴏɴɢ.
+⦿ /end ➠ ᴇɴᴅs ᴛʜᴇ ᴍᴜsɪᴄ ᴘʟᴀʏʙᴀᴄᴋ.
+⦿ /skip ➠ sᴋɪᴘs ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ sᴏɴɢ.
+⦿ /volume ➠ ᴀᴅᴊᴜsᴛs ᴛʜᴇ ᴠᴏʟᴜᴍᴇ ʟᴇᴠᴇʟ.
+⦿ /song ➠ ᴅᴏᴡɴʟᴏᴀᴅ ғᴏʀ ᴀ sᴏɴɢ.
+⦿ /video ➠ ᴅᴏᴡɴʟᴏᴀᴅ ғᴏʀ ᴀ ᴠɪᴅᴇᴏ.
+⦿ /id ➠ ᴅɪsᴘʟᴀʏs ʏᴏᴜʀ ᴛᴇʟᴇɢʀᴀᴍ ɪᴅ ᴏʀ ɢʀᴏᴜᴘ ɪᴅ.
+
+"""
+# ------------------------------------------------------------------------------- #
+elif query.data=="help_":        
+        reply_markup = InlineKeyboardMarkup(back_buttons)
+        try:
+            await query.edit_message_text(
+                COMMANDS_TEXT.format(query.from_user.first_name, query.from_user.id),
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass
+
+# ------------------------------------------------------------------------------- #
+elif query.data=="close_data":
+        try:
+            await query.message.delete()
+            await query.message.reply_to_message.delete()
+        except:
+            pass
+
+# ------------------------------------------------------------------------------- #
+
