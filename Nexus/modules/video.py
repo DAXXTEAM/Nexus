@@ -32,15 +32,6 @@ keyboard = InlineKeyboardMarkup([
 
 
 # ------------------------------------------------------------------------------- #
-elif query.data=="close_data":
-        try:
-            await query.message.delete()
-            await query.message.reply_to_message.delete()
-        except:
-            pass
-
-# ------------------------------------------------------------------------------- #
-
 
 
 
