@@ -4,7 +4,7 @@ from io import StringIO
 from time import time
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-from config import OWNER_ID
+from config import OWNER_ID, SUDO_USERS
 from Nexus import Nexus
 
 
@@ -26,13 +26,13 @@ async def edit_or_reply(msg: Message, **kwargs):
 
 @Nexus.on_edited_message(
     filters.command(["eval", "Nexus"])
-    & filters.user(OWNER_ID)
+    & filters.user(SUDO_USERS)
     & ~filters.forwarded
     & ~filters.via_bot
 )
 @Nexus.on_message(
     filters.command(["eval", "Nexus"])
-    & filters.user(OWNER_ID)
+    & filters.user(SUDO_USERS)
     & ~filters.forwarded
     & ~filters.via_bot
 )
@@ -138,13 +138,13 @@ async def forceclose_command(_, CallbackQuery):
 
 @Nexus.on_edited_message(
     filters.command("sh")
-    & filters.user(OWNER_ID)
+    & filters.user(SUDO_USERS)
     & ~filters.forwarded
     & ~filters.via_bot
 )
 @Nexus.on_message(
     filters.command("sh")
-    & filters.user(OWNER_ID)
+    & filters.user(SUDO_USERS)
     & ~filters.forwarded
     & ~filters.via_bot
 )
