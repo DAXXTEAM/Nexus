@@ -25,7 +25,7 @@ def time_formatter(milliseconds):
         return tmp[:-1]
     return tmp
 
-@Nexus.on_message(filters.command("lll") & filters.user(SUDO_USERS))
+@Nexus.on_message(filters.command("ping") & filters.user(SUDO_USERS))
 async def activevc(_, message: Message):
     uptime = time_formatter((time.time() - start_time) * 1000)
     cpu = psutil.cpu_percent()
