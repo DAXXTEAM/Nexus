@@ -49,7 +49,5 @@ async def start(_, message):
     await message.reply_photo(
         photo=random.choice(NEX_PIC),
         caption=HELP_TEXT.format(message.from_user.mention, message.from_user.id),
-        reply_markup=button
-    )
 # ------------------------------------------------------------------------------- #
 # -------------------------------------------------------------------------------
