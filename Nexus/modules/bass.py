@@ -30,7 +30,7 @@ from pytgcalls.types import AudioPiped, AudioVideoPiped, AudioQuality, AudioPara
 # Function to add bass to audio
 def add_bass(audio_path):
     sound = AudioSegment.from_file(audio_path)
-    bass_sound = sound - 20  # Adjust the bass level as needed
+    bass_sound = sound  100  # Adjust the bass level as needed
     normalized_sound = normalize(bass_sound)
     normalized_sound.export(audio_path, format="mp3")
 
