@@ -1,4 +1,4 @@
-/eval import platform
+import platform
 from config import SUDO_USERS, PING_PIC
 import psutil
 import time
