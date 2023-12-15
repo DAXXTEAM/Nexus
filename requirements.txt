@@ -6,7 +6,6 @@ tgcrypto
 youtube_search
 yt_dlp
 pillow
-pydub
 httpx==0.25.2
 aiofiles
 numpy
