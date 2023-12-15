@@ -9,6 +9,8 @@ pillow
 httpx==0.25.2
 aiofiles
 numpy
+gtts
+openai==0.28.0
 wget
 aiohttp
 pornhub-api==0.2.0
