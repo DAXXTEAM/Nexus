@@ -1,6 +1,7 @@
 ffmpeg-python
 py-tgcalls
 pyrogram
+motor
 python-dotenv==1.0.0
 tgcrypto
 youtube_search
