@@ -5,6 +5,7 @@ python-dotenv==1.0.0
 tgcrypto
 youtube_search
 yt_dlp
+pydub
 pillow
 httpx==0.25.2
 aiofiles
