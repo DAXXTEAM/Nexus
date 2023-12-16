@@ -2,7 +2,7 @@ from pyrogram import filters, Client
 from config import OWNER_ID
 from Nexus import Nexus
 import random
-from Nexus.Helper import *
+from Nexus.Helper import userdb, chatdb
 from pyrogram.types import (
     Message,
     CallbackQuery,
