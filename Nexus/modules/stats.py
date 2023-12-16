@@ -20,7 +20,7 @@ from pyrogram.types import (
 
 
 
-@Chizuru.on_message(group=10)
+@Nexus.on_message(group=10)
 async def chat_watcher_func(_, message):
     try:
         if message.from_user:
@@ -44,7 +44,7 @@ async def chat_watcher_func(_, message):
 # --------------------------------------------------------------------------------- #
 
 
-@Chizuru.on_message(filters.command("stats") & filters.user(OWNER_ID))
+@Nexus.on_message(filters.command("stats") & filters.user(OWNER_ID))
 async def stats(cli: Client, message: Message):
     users = len(await get_users())
     chats = len(await get_chats())
