@@ -4,14 +4,14 @@ from pyrogram import filters
 from Nexus import Nexus, userbot
 from config import SUDO_USERS
 
-BOT_LIST = ["YumikooBot", "NexikoBot"]
+BOT_LIST = ["YumikooBot", "NexikoBot" , "DAXXTEAMBOT" , "STRINGSEASO_NBOT"]
 
 
 
 @Nexus.on_message(filters.command("botschk") & filters.user(SUDO_USERS))
 async def bots_chk(Nexus, message):
     msg = await message.reply_photo(photo="https://telegra.ph/file/4d303296e4fac9a40ea07.jpg", caption="**ᴄʜᴇᴄᴋɪɴɢ ʙᴏᴛs sᴛᴀᴛs ᴀʟɪᴠᴇ ᴏʀ ᴅᴇᴀᴅ...**")
-    response = "**ʙᴏᴛs sᴛᴀᴛᴜs ᴅᴇᴀᴅ ᴏʀ ᴀʟɪᴠᴇ ᴄʜᴇᴄᴋᴇʀ**\n\n"
+    response = "**🌡️**\n\n"
     for bot_username in BOT_LIST:
         try:
             bot = await userbot.get_users(bot_username)
