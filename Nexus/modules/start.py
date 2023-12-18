@@ -7,7 +7,23 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.types import Message
 
 # ------------------------------------------------------------------------------- #
+HELP_TEXT = """
+ʜᴇʟʟᴏ {} 
+\n⋆─────────────────────⋆
+ᴛʜᴇsᴇ ᴀʀᴇ ᴛʜᴇ ᴀᴠᴀɪʟᴀʙʟᴇ  ᴄᴏᴍᴍᴀɴᴅs:
 
+⦿ /play ➠ ᴘʟᴀʏs ᴀ sᴏɴɢ ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ.
+⦿ /vplay  ➠ ᴘʟᴀʏs ᴀ sᴏɴɢ ᴏɴ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ.
+⦿ /porn  ➠sᴏᴏɴ.
+⦿ /stop ➠ sᴛᴏᴘs ᴛʜᴇ ᴄᴜʀʀᴇɴᴛʟʏ ᴘʟᴀʏɪɴɢ sᴏɴɢ.
+⦿ /end ➠ ᴇɴᴅs ᴛʜᴇ ᴍᴜsɪᴄ ᴘʟᴀʏʙᴀᴄᴋ.
+⦿ /skip ➠ sᴋɪᴘs ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ sᴏɴɢ.
+⦿ /volume ➠ ᴀᴅᴊᴜsᴛs ᴛʜᴇ ᴠᴏʟᴜᴍᴇ ʟᴇᴠᴇʟ.
+⦿ /song ➠ ᴅᴏᴡɴʟᴏᴀᴅ ғᴏʀ ᴀ sᴏɴɢ.
+⦿ /video ➠ ᴅᴏᴡɴʟᴏᴀᴅ ғᴏʀ ᴀ ᴠɪᴅᴇᴏ.
+⦿ /id ➠ ᴅɪsᴘʟᴀʏs ʏᴏᴜʀ ᴛᴇʟᴇɢʀᴀᴍ ɪᴅ ᴏʀ ɢʀᴏᴜᴘ ɪᴅ.
+
+"""
 NEXUS_PIC = [
     "https://telegra.ph/file/7c25ef427c9f3cded5577.jpg",
     "https://telegra.ph/file/625d235cc0a22fb8525b5.jpg",
@@ -60,7 +76,13 @@ async def start(_, message):
         caption=START_TEXT.format(message.from_user.mention, message.from_user.id),
         reply_markup=button
     )
-# ------------------------------------------------------------------------------- #
+    
+@Nexus.on_callback_query(filters.regex("^help_"))
+async def help_callback(_, query):
+    await query.message.reply_photo(
+        photo=random.choice(NEXUS_PIC),
+        caption=HELP_TEXT.format(query.from_user.mention, query.from_user.id) 
+    )
 
 @Nexus.on_message(filters.private & filters.incoming)
 async def on_pm_s(client: Client, message: Message):
