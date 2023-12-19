@@ -1,7 +1,7 @@
 from pyrogram import filters
 import requests, random
 from bs4 import BeautifulSoup
- from Nexus import Nexus
+from Nexus import Nexus
 
 import os 
 import yt_dlp
