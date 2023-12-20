@@ -1,6 +1,7 @@
 import requests, random
 from bs4 import BeautifulSoup
 from Nexus import Nexus
+from Nexus.modules.video import vplay_data
 from pyrogram.types import *
 from pyrogram import filters, Client
 import os 
@@ -13,7 +14,8 @@ from PIL import Image, ImageFont, ImageDraw, ImageFilter
 
 keyboard = InlineKeyboardMarkup([
         [
-            InlineKeyboardButton("⊝ ᴄʟᴏsᴇ ⊝", callback_data="close_data"),    
+            InlineKeyboardButton("⊝ ᴄʟᴏsᴇ ⊝", callback_data="close_data"), 
+            InlineKeyboardButton("⊝ Vplay ⊝", callback_data="vplay_data"),
         ]
 ])
 
