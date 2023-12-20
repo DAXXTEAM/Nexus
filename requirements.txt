@@ -1,4 +1,4 @@
-ffmpeg-python==0.2.0
+ffmpeg-python
 py-tgcalls==1.0.3
 pyrogram
 bs4
