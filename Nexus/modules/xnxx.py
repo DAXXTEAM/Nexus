@@ -1,12 +1,26 @@
-from pyrogram import filters
 import requests, random
 from bs4 import BeautifulSoup
 from Nexus import Nexus
-
+from pyrogram.types import *
+from pyrogram import filters, Client
 import os 
 import yt_dlp
+from pytgcalls.types import Update
+from pytgcalls.types import AudioVideoPiped
+from asyncio.queues import QueueEmpty
+from PIL import ImageGrab
+from PIL import Image, ImageFont, ImageDraw, ImageFilter
 
+keyboard = InlineKeyboardMarkup([
+        [
+            InlineKeyboardButton("⊝ ᴄʟᴏsᴇ ⊝", callback_data="close_data"),    
+        ]
+])
 
+@Nexus.on_callback_query(filters.regex("^close_data"))
+async def close_callback(_, query):
+    chat_id = query.message.chat.id
+    await query.message.delete()
 
 async def get_video_stream(link):
     ydl_opts = {
@@ -67,7 +81,7 @@ async def get_random_video_info(client, message):
     if video_info:
         video_link = video_info['link']
         video = await get_video_stream(video_link)
-        await message.reply_video(video, caption=f"{title}")
+        await message.reply_video(video, caption=f"{title}", reply_markup=keyboard)
              
     else:
         await message.reply(f"No video link found for '{title}'.")
