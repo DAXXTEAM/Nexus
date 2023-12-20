@@ -23,18 +23,39 @@ from pytgcalls.types import AudioVideoPiped
 
 DURATION_LIMIT = 300
 
-keyboard = InlineKeyboardMarkup([
+keyboard = InlineKeyboardMarkup(
+        [
         [
             InlineKeyboardButton("⊝ ᴄʟᴏsᴇ ⊝", callback_data="close_data"),    
-        ]
-])
+        ],
+        [
+        InlineKeyboardButton("⏯️ Pause", callback_data="pause"),
+        InlineKeyboardButton("⏭️ Skip", callback_data="skip"),
+        InlineKeyboardButton("▶️ Resume", callback_data="resume")
+        ],
+         
+]
+)
 
 @Nexus.on_callback_query(filters.regex("^close_data"))
 async def close_callback(_, query):
     chat_id = query.message.chat.id
     await query.message.delete()
 
+@Nexus.on_callback_query(filters.regex("^pause$"))
+async def pause_callback(_, query):
+    chat_id = query.message.chat.id
+    await query.answer("Pausing playback...") 
 
+@Nexus.on_callback_query(filters.regex("^resume$"))
+async def resume_callback(_, query):
+    chat_id = query.message.chat.id
+    await query.answer("Resuming playback...")
+
+@Nexus.on_callback_query(filters.regex("^skip$"))
+async def skip_callback(_, query):
+    chat_id = query.message.chat.id
+    await query.answer("Skipping to the next track...") 
 
 
 
