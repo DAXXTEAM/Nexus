@@ -1,5 +1,5 @@
 ffmpeg-python
-py-tgcalls
+py-tgcalls==1.0.3
 pyrogram
 bs4
 motor
