@@ -1,7 +1,7 @@
 import requests, random
 from bs4 import BeautifulSoup
 from Nexus import Nexus
-from Nexus.modules.video import vplay_data
+from Nexus.modules.video import vplay_callback
 from pyrogram.types import *
 from pyrogram import filters, Client
 import os 
