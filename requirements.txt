@@ -1,4 +1,4 @@
-ffmpeg-python
+ffmpeg-python==0.2.0
 py-tgcalls==1.0.3
 pyrogram
 bs4
@@ -8,7 +8,7 @@ tgcrypto
 youtube_search
 yt_dlp
 pydub
-pillow==10.1.0
+pillow
 httpx==0.25.2
 aiofiles
 numpy
