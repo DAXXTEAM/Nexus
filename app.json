@@ -1,0 +1,62 @@
+{
+  "name": "MUSIC BOT",
+  "description": "Your app description",
+  "repository": "https://github.com/your-username/your-repo",
+  "logo": "https://example.com/path/to/your/logo.png",
+  "keywords": ["keyword1", "keyword2"],
+  "addons": ["heroku-redis", "heroku-postgresql"],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python.git"
+    }
+  ],
+  "env": {
+    "API_ID": {
+      "description": "Your API ID",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Your API Hash",
+      "value": ""
+    },
+    "BOT_USERNAME": {
+      "description": "Your Bot Username",
+      "value": ""
+    },
+    "BOT_TOKEN": {
+      "description": "Your Bot Token",
+      "value": ""
+    },
+    "OWNER_ID": {
+      "description": "Your Owner ID",
+      "value": ""
+    },
+    "SUDO_USERS": {
+      "description": "Your Sudo Users (if applicable)",
+      "value": ""
+    },
+    "MONGO_URL": {
+      "description": "Your Mongo URL (if applicable)",
+      "value": ""
+    },
+    "SESSION_STRING": {
+      "description": "Your Session String",
+      "value": ""
+    },
+    "CHANNEL": {
+      "description": "Your Channel (if applicable)",
+      "value": ""
+    },
+    "SUPPORT": {
+      "description": "Your Support Contact (if applicable)",
+      "value": ""
+    },
+    "OWNER_USERNAME": {
+      "description": "Your Owner Username (if applicable)",
+      "value": ""
+    }
+  },
+  "scripts": {
+    "start": "python Nexus.py"
+  }
+}
