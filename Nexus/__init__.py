@@ -7,19 +7,14 @@ from dotenv import load_dotenv
 from pyrogram import Client
 from config import API_ID, API_HASH, BOT_TOKEN, SESSION_STRING
 
-
-
 loop = asyncio.get_event_loop()
 load_dotenv()
 boot = time.time()
-
 
 logging.basicConfig(
     format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s",
     level=logging.INFO,
 )
-
-
 
 Nexus = Client(
     ":Nexus:",
@@ -37,24 +32,20 @@ userbot = Client(
 
 pytgcalls = PyTgCalls(userbot)
 
-
-
-
-
 async def Nexus_bot():
     global BOT_ID, BOT_NAME, BOT_USERNAME
-    await Nexus.start()
-    await userbot.start()
-    await pytgcalls.start()
-    getme = await Nexus.get_me()
-    BOT_ID = getme.id
-    BOT_USERNAME = getme.username
-    if getme.last_name:
-        BOT_NAME = getme.first_name + " " + getme.last_name
-    else:
-        BOT_NAME = getme.first_name
-
+    try:
+        await Nexus.start()
+        await userbot.start()
+        await pytgcalls.start()
+        getme = await Nexus.get_me()
+        BOT_ID = getme.id
+        BOT_USERNAME = getme.username
+        if getme.last_name:
+            BOT_NAME = getme.first_name + " " + getme.last_name
+        else:
+            BOT_NAME = getme.first_name
+    except Exception as e:
+        print(f"Error during authorization: {e}")
 
 loop.run_until_complete(Nexus_bot())
-
-
