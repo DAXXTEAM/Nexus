@@ -6,9 +6,6 @@ from Nexus.modules import ALL_MODULES
 
  
 
-loop = asyncio.get_event_loop()
-
-
 async def Nex_boot():
     for all_module in ALL_MODULES:
         importlib.import_module("Nexus.modules." + all_module)
@@ -18,4 +15,4 @@ async def Nex_boot():
 
 
 if __name__ == "__main__":
-    loop.run_until_complete(Nex_boot())
+    asyncio.get_event_loop().run_until_complete(Nex_boot())
