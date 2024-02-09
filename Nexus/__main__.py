@@ -6,7 +6,7 @@ from Nexus.modules import ALL_MODULES
 
  
 
-async def Nex_boot():
+async def Nexus_bot():
     for all_module in ALL_MODULES:
         importlib.import_module("Nexus.modules." + all_module)
     print("""𝐘𝐨𝐮𝐫 𝐛𝐨𝐭 𝐡𝐚𝐬 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐬𝐭𝐚𝐫𝐭𝐞𝐝 𝐚𝐧𝐝 𝐢𝐬 𝐫𝐞𝐚𝐝𝐲 𝐭𝐨 𝐚𝐬𝐬𝐢𝐬𝐭""")
@@ -15,4 +15,4 @@ async def Nex_boot():
 
 
 if __name__ == "__main__":
-    asyncio.get_event_loop().run_until_complete(Nex_boot())
+    asyncio.get_event_loop().run_until_complete(Nexus_bot())
