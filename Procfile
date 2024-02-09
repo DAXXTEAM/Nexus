@@ -1,1 +1,1 @@
-worker: python -m Nexus
+worker: python3 -m Nexus
