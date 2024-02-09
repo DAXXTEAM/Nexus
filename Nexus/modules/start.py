@@ -61,7 +61,7 @@ button = InlineKeyboardMarkup([
         InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ", url=f"{SUPPORT}"),
     ],
     [
-        InlineKeyboardButton("ᴅᴇᴠ", url=f"https://t.me/{OWNER_USERNAME}"),
+        InlineKeyboardButton("ᴅᴇᴠ", url=f"t.me/{OWNER_USERNAME}"),
     ],
     [
         InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅ", callback_data="help_"),
