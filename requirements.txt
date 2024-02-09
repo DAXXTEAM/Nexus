@@ -1,7 +1,7 @@
-py-tgcalls==0.9.7
-pyrogram==2.0.106
-bs4
 ffmpeg-python
+py-tgcalls
+pyrogram
+bs4
 motor
 python-dotenv==1.0.0
 tgcrypto
@@ -13,5 +13,7 @@ httpx==0.25.2
 aiofiles
 numpy
 gtts
+openai==0.28.0
 wget
 aiohttp
+pornhub-api==0.2.0
