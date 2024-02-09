@@ -17,7 +17,10 @@ from Nexus.Helper import requirements as rq
 from Nexus.Helper.errors import DurationLimitError
 from Nexus.Helper.requirements import get_audio_stream
 from pytgcalls.types import Update
-from pytgcalls.types import AudioPiped, AudioVideoPiped, AudioQuality, AudioParameters
+#from pytgcalls.types import AudioPiped, AudioVideoPiped, AudioQuality, AudioParameters
+
+from pytgcalls.types.input_stream import InputStream
+from pytgcalls.types.input_stream import InputAudioStream
 
 #from pytgcalls.types import *
 
