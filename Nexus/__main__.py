@@ -11,7 +11,7 @@ loop = asyncio.get_event_loop()
 
 async def daxx_boot():
     for all_module in ALL_MODULES:
-        importlib.import_module("Zuli.modules." + all_module)
+        importlib.import_module("Nexus.modules." + all_module)
     print("»»»» ʙᴏᴛ ᴅᴇᴘʟᴏʏ sᴜᴄᴄᴇssғᴜʟʟʏ. ✨ 🎉")
     await idle()
     print("»» ɢᴏᴏᴅ ʙʏᴇ ! sᴛᴏᴘᴘɪɴɢ ʙᴏᴛ.")
