@@ -22,5 +22,62 @@
       "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
     }
   ],
-  "stack": "container"
+  "stack": "container",
+  "env": {
+    "API_ID": {
+      "value": "",
+      "required": true,
+      "description": "Your Telegram API ID"
+    },
+    "API_HASH": {
+      "value": "",
+      "required": true,
+      "description": "Your Telegram API Hash"
+    },
+    "BOT_USERNAME": {
+      "value": "",
+      "required": true,
+      "description": "Your Telegram Bot's Username"
+    },
+    "BOT_TOKEN": {
+      "value": "",
+      "required": true,
+      "description": "Your Telegram Bot's Token"
+    },
+    "OWNER_ID": {
+      "value": "",
+      "required": true,
+      "description": "Your Telegram Owner ID"
+    },
+    "SUDO_USERS": {
+      "value": "",
+      "required": true,
+      "description": "Authorized Sudo Users"
+    },
+    "MONGO_URL": {
+      "value": "",
+      "required": true,
+      "description": "Your MongoDB URL"
+    },
+    "SESSION_STRING": {
+      "value": "",
+      "required": true,
+      "description": "Your Session String"
+    },
+    "CHANNEL": {
+      "value": "",
+      "required": true,
+      "description": "Your Telegram Channel"
+    },
+    "SUPPORT": {
+      "value": "",
+      "required": true,
+      "description": "Support Information"
+    },
+    "OWNER_USERNAME": {
+      "value": "",
+      "required": true,
+      "description": "Your Telegram Owner's Username"
+    }
+  }
 }
